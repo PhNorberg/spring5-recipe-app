@@ -27,6 +27,7 @@ public class Recipe {
     private Notes notes;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    // mappedBy = "recipe" connects the recipe member variable in the Ingredient for the relationship
     private Set<Ingredient> ingredients;
     public Long getId() {
         return id;
